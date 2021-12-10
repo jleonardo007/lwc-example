@@ -1,0 +1,15 @@
+<template>
+  <section class="timer">
+    <div class="timer-container">
+      <app-timer-display
+        minutes={minutes}
+        seconds={seconds}
+      ></app-timer-display>
+      <app-timer-controls
+        state={state}
+        service={service}
+        minutes={minutes}
+      ></app-timer-controls>
+    </div>
+  </section>
+</template>

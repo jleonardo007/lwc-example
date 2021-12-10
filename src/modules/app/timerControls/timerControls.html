@@ -1,0 +1,32 @@
+<template>
+  <div class="controls-container">
+    <div class="timer-controls">
+      <div class="minutes-input">
+        <input type="number" min="1" value={minutes} oninput={setMinutes} />
+      </div>
+      <div class="timer-buttons">
+        <template if:true={isPaused}>
+          <button
+            class="play-pause-button"
+            onclick={initTimer}
+            title="Init timer"
+          >
+            S
+          </button>
+        </template>
+        <template if:false={isPaused}>
+          <button
+            class="play-pause-button"
+            onclick={pauseTimer}
+            title="Pause timer"
+          >
+            P
+          </button>
+        </template>
+        <button class="reset-button" title="Reset timer" onclick={resetTimer}>
+          R
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
